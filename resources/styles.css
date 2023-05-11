@@ -1,16 +1,30 @@
 /* Universal Styles */
 
-body {
+body, html {
     font-family: 'Playfair Display', serif;
-    background: linear-gradient(158deg, rgba(2,0,36,1) 0%, rgba(0,106,131,1) 42%, rgba(76,0,83,1) 85%);
-    background-repeat: no-repeat;
     margin: 0 auto;
     color: rgb(224,224,224);
+    background: linear-gradient(158deg, rgba(2,0,36,1) 0%, rgba(0,106,131,1) 42%, rgba(76,0,83,1) 85%);
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.wrapper {
+    min-height: 100vh;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main {
     padding-left: 1rem;
     padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 h2 {
@@ -148,6 +162,8 @@ footer {
     justify-content: space-between;
     padding-top: .5rem;
     background: linear-gradient(360deg, rgba(38,38,38,0.9) 0%, rgba(38,38,38,0) 99%);
+    /* position: absolute;
+    bottom: 0; */
 }
 
 footer h3 {
