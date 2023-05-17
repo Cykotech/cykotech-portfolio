@@ -19,12 +19,13 @@ body, html {
 }
 
 main {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+    width: 100%;
 }
 
 h2 {
@@ -127,6 +128,7 @@ header ul li {
 
 #skills {
     margin-bottom: 5rem;
+    width: 100%;
 }
 
 #skills .container {
@@ -143,9 +145,9 @@ header ul li {
 @media screen and (max-width: 425px) {
     #skills .container {
         flex-wrap: wrap;
-        justify-content: space-between;
         height: 225px;
         align-content: space-between;
+        justify-content: center;
     }
 
     #skills .container img {
@@ -162,8 +164,6 @@ footer {
     justify-content: space-between;
     padding-top: .5rem;
     background: linear-gradient(360deg, rgba(38,38,38,0.9) 0%, rgba(38,38,38,0) 99%);
-    /* position: absolute;
-    bottom: 0; */
 }
 
 footer h3 {
