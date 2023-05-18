@@ -13,6 +13,7 @@ html {
   );
   background-repeat: no-repeat;
   display: flex;
+  width: 100%;
 }
 
 .wrapper {
@@ -102,77 +103,6 @@ header a:active {
     text-align: center;
     font-size: 0.75rem;
     padding-right: 1rem;
-  }
-}
-
-/* About Me Styles */
-
-#about {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-#about .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 95%;
-}
-
-#about .container p {
-  padding-bottom: 3rem;
-  text-align: justify;
-}
-
-#about .container img {
-  width: 25%;
-  margin-left: 1.5rem;
-  margin-right: 10%;
-}
-
-@media screen and (max-width: 425px) {
-  #about .container {
-    flex-direction: column;
-  }
-
-  #about .container img {
-    margin: 0;
-    width: 85%;
-  }
-
-  #about .container p {
-    padding-bottom: 0;
-  }
-}
-/* Skills Styles */
-
-#skills {
-  margin-bottom: 5rem;
-  width: 100%;
-}
-
-#skills .container {
-  display: flex;
-  width: 85%;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-
-#skills .container img {
-  height: 100px;
-}
-
-@media screen and (max-width: 425px) {
-  #skills .container {
-    flex-wrap: wrap;
-    height: 225px;
-    align-content: space-between;
-    justify-content: center;
-  }
-
-  #skills .container img {
-    margin: 0;
   }
 }
 
