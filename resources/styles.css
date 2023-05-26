@@ -200,11 +200,42 @@ footer .container {
   display: flex;
   justify-content: flex-end;
   margin-right: 2rem;
+  align-items: center;
 }
 
 footer .container img {
   width: 3rem;
-  padding-left: 8rem;
+}
+
+footer .container a {
+  margin-left: 8rem;
+}
+
+footer .container #email:hover {
+  background-color: white;
+}
+
+footer .container #email:active {
+  transform: scale(0.85);
+  background-color: gray;
+}
+
+footer .container #github:hover {
+  background-color: white;
+}
+
+footer .container #github:active {
+  transform: scale(0.85);
+  background-color: rgb(128, 128, 128);
+}
+
+footer .container #linkedin:hover {
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+footer .container #linkedin:active {
+  transform: scale(0.85);
 }
 
 @media screen and (max-width: 768px) {

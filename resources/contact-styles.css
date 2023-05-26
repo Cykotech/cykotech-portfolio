@@ -131,15 +131,34 @@ main .text-container {
 
 main .img-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 main .img-container a {
   width: fit-content;
 }
+
 main .img-container img {
   width: 16rem;
+}
+
+main .container #github:hover {
+  background-color: white;
+}
+
+main .container #github:active {
+  transform: scale(0.85);
+  background-color: rgb(128, 128, 128);
+}
+
+main .container #linkedin:hover {
+  border: 3px solid black;
+  border-radius: 17px;
+}
+
+main .container #linkedin:active {
+  transform: scale(0.85);
 }
 
 @media screen and (max-width: 768px) {
