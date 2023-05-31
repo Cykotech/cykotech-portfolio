@@ -152,6 +152,14 @@ main .container #github:active {
   background-color: rgb(128, 128, 128);
 }
 
+main .container #github:visited {
+  background-color: transparent;
+}
+
+main .container #linkedin {
+  border: 3px solid transparent;
+}
+
 main .container #linkedin:hover {
   border: 3px solid black;
   border-radius: 17px;
@@ -159,6 +167,10 @@ main .container #linkedin:hover {
 
 main .container #linkedin:active {
   transform: scale(0.85);
+}
+
+main .container #linkedin:visited {
+  background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
