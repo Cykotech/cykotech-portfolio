@@ -142,7 +142,7 @@ footer .container a {
   margin-left: 8rem;
 }
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
 footer .container #email:hover {
   background-color: white;
 }
@@ -153,7 +153,7 @@ footer .container #email:active {
   background-color: gray;
 }
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
 footer .container #github:hover {
   background-color: white;
 }
@@ -168,7 +168,7 @@ footer .container #linkedin {
   border: 3px solid transparent;
 }
 
-@media (hover:hover) {
+@media (hover:hover) and (pointer:fine) {
 footer .container #linkedin:hover {
   border: 3px solid black;
   border-radius: 5px;
