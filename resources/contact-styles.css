@@ -143,7 +143,11 @@ main .img-container img {
   width: 16rem;
 }
 
-@media (hover: hover) and (pointer:fine) {
+#github {
+  border-radius: 50%;
+}
+
+@media (hover: hover) and (pointer: fine) {
   main .container #github:hover {
     background-color: white;
   }
@@ -158,11 +162,11 @@ main .container #linkedin {
   border: 3px solid transparent;
 }
 
-@media (hover:hover) and (pointer:fine) {
-main .container #linkedin:hover {
-  border: 3px solid black;
-  border-radius: 17px;
-}
+@media (hover: hover) and (pointer: fine) {
+  main .container #linkedin:hover {
+    border: 3px solid black;
+    border-radius: 17px;
+  }
 }
 
 main .container #linkedin:active {

@@ -220,6 +220,10 @@ footer .container a {
   margin-left: 8rem;
 }
 
+#email {
+  border-radius: 6px;
+}
+
 @media (hover: hover) and (pointer:fine) {
   footer .container #email:hover {
     background-color: white;
@@ -229,6 +233,10 @@ footer .container a {
 footer .container #email:active {
   transform: scale(0.85);
   background-color: gray;
+}
+
+#github {
+  border-radius: 50%;
 }
 
 @media (hover: hover) and (pointer:fine) {
