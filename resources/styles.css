@@ -220,11 +220,11 @@ footer .container a {
   margin-left: 8rem;
 }
 
-#email {
+img#email {
   border-radius: 6px;
 }
 
-@media (hover: hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   footer .container #email:hover {
     background-color: white;
   }
@@ -235,11 +235,11 @@ footer .container #email:active {
   background-color: gray;
 }
 
-#github {
+img#github {
   border-radius: 50%;
 }
 
-@media (hover: hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   footer .container #github:hover {
     background-color: white;
   }
@@ -254,7 +254,7 @@ footer .container #linkedin {
   border: 3px solid transparent;
 }
 
-@media (hover: hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   footer .container #linkedin:hover {
     border: 3px solid black;
     border-radius: 5px;

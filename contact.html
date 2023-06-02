@@ -28,10 +28,22 @@
       <main>
         <img src="resources/temp photo.jpg" id="portrait" />
         <div class="container">
-          <div class="text-container">
-            <h2>Email - jon1993g@gmail.com</h2>
-            <h2>Phone - (717)-813-0817</h2>
-          </div>
+            <form
+              action="mailto:jon1993g@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <input type="submit" value="Send" />
+            </form>
           <div class="img-container">
             <a href="https://github.com/Cykotech" target="_blank"
               ><img src="./resources/Github.png" id="github"

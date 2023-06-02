@@ -124,9 +124,90 @@ main #portrait {
   width: 25%;
 }
 
-main .text-container {
-  display: flex;
-  flex-direction: column;
+/* Form Styles */
+
+main form {
+  display: grid;
+  grid-template-columns: repeat(1, auto 80%);
+  width: 100%;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: rgba(38, 38, 38, 0.5);
+  color: rgb(224, 224, 224);
+  padding: 1rem;
+  border: none;
+  border-radius: 20px;
+}
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible {
+  outline: none;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+label[for="name"],
+label[for="email"] {
+  align-self: center;
+}
+
+label[for="message"] {
+  padding-top: 0.5rem;
+}
+
+main form textarea {
+  resize: none;
+  height: 5rem;
+  background-color: rgba(38, 38, 38, 0.5);
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  color: rgb(224, 224, 224);
+}
+
+main form textarea:focus-visible {
+  outline: none;
+}
+
+main form input[type="submit"] {
+  grid-column: 2 / span 1;
+  width: 30%;
+  justify-self: center;
+  background-color: rgba(38, 38, 38, 0.9);
+  color: rgb(224, 224, 224);
+  padding: 0.5rem;
+  border-radius: 25px;
+  border: none;
+}
+
+@media (hover: hover) {
+  main form input[type="submit"]:hover {
+    transform: scale(1.1);
+  }
+}
+
+main form input[type="submit"]:active {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 425px) {
+  main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 85%;
+  }
 }
 
 main .img-container {
@@ -136,14 +217,14 @@ main .img-container {
 }
 
 main .img-container a {
-  width: fit-content;
+  width: 40%;
 }
 
 main .img-container img {
-  width: 16rem;
+  width: 100%;
 }
 
-#github {
+img#github {
   border-radius: 50%;
 }
 
@@ -192,9 +273,9 @@ main .container #linkedin:active {
     margin-top: 5rem;
   }
 
-  main .img-container img {
+  /* main .img-container img {
     width: 12rem;
-  }
+  } */
 }
 
 @media screen and (max-width: 425px) {
@@ -217,6 +298,7 @@ main .container #linkedin:active {
   }
 
   main .img-container a {
+    width: 80%;
     margin-bottom: 3rem;
   }
 }
