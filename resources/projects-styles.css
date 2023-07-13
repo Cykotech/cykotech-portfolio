@@ -26,16 +26,6 @@ html {
   justify-content: space-between;
 }
 
-main {
-  /* padding-left: 1rem;
-    padding-right: 1rem; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
-}
-
 h2 {
   text-align: center;
   font-size: 2.5em;
@@ -110,7 +100,66 @@ header a:active {
 /* Main Styles */
 
 main {
-  display: inline-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+main .slideshow {
+  display: grid;
+  width: 100%;
+}
+
+main .slideshow .slides {
+  grid-area: 1/1;
+}
+
+main .buttons {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  grid-area: 1/1;
+}
+
+main .arrow {
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+main img {
+  height: 100%;
+}
+
+main #left {
+  background: linear-gradient(
+    90deg,
+    rgba(38, 38, 38, 0.8) 0%,
+    rgba(38, 38, 38, 0.2) 99%
+  );
+}
+
+main #right {
+  background: linear-gradient(
+    270deg,
+    rgba(38, 38, 38, 0.8) 0%,
+    rgba(38, 38, 38, 0.2) 99%
+  );
+}
+
+main .one {
+  width: 100%;
+  display: block;
+}
+
+main .two {
+  display: none;
 }
 
 /* Footer Styles */
