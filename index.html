@@ -2,15 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./resources/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
       rel="stylesheet"
-    />
+      href="./resources/styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
+      rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <title>Jonathon Hanson</title>
   </head>
   <body>
@@ -20,8 +31,8 @@
         <nav>
           <ul>
             <li><a href="./index.html">About Me</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="./contact.html">Contact Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
           </ul>
         </nav>
       </header>
@@ -29,48 +40,79 @@
         <section id="about">
           <h2>About Me</h2>
           <div class="container">
-            <img src="./resources/temp photo.jpg" />
             <p>
               My name is Jonathon Hanson and I am a self-motivated and
-              determined Full-Stack JavaScript developer, currently in the
-              process of learning and refining my skills. As a self-taught
-              developer, I have demonstrated a deep passion for programming and
-              a strong drive to succeed in the field. Proficient in front-end
-              and back-end web development, I have taken the initiative to
-              acquire knowledge and hands-on experience through self-study and
-              independent projects. With a growth mindset and a relentless
-              pursuit of improvement, I am dedicated to expanding my expertise
-              and contributing to the development of innovative and impactful
-              applications. Eager to collaborate with like-minded professionals
-              and be part of a dynamic team, I am excited to continue my journey
-              in software development.
+              determined Full-Stack JavaScript developer with a strong
+              foundation in React and associated libraries, complementing my
+              proficiency in front-end and back-end web development. As a
+              self-taught developer, I have demonstrated a deep passion for
+              programming and a strong drive to succeed in the field. Through
+              independent study and hands-on projects, I've acquired expertise
+              in building dynamic and interactive user interfaces using React.
+              I'm also well-versed in utilizing libraries like Redux and React
+              Router to create efficient and scalable web applications.<br /><br />
+              My journey in software development has been marked by a relentless
+              pursuit of improvement and a commitment to staying updated with
+              the latest industry trends and best practices. Eager to
+              collaborate with like-minded professionals and be part of a
+              dynamic team, I'm excited to leverage my skills in React and
+              full-stack development to contribute to innovative and impactful
+              projects.
             </p>
+            <div id="skills">
+              <h3>Skills</h3>
+              <div class="container">
+                <img src="./resources/icons8-html-5-1080.png" />
+                <img src="./resources/icons8-css3-1080.png" />
+                <img src="./resources/icons8-javascript-1080.png" />
+                <img src="./resources/icons8-react-native-1080.png" />
+                <img src="./resources/icons8-git-1080.png" />
+              </div>
+            </div>
           </div>
         </section>
-        <section id="skills">
-          <h2>Skills</h2>
-          <div class="container">
-            <img src="./resources/HTML.png" />
-            <img src="./resources/CSS.png" />
-            <img src="./resources/JS.png" />
-            <img src="./resources/Git.png" />
-          </div>
+        <section id="projects">
+          <h2>Projects</h2>
         </section>
       </main>
-      <footer>
-        <h3>Contact Me</h3>
+      <footer id="contact">
+        <h2>Contact Me</h2>
         <div class="container">
-          <a href="./contact.html">
-            <img src="./resources/Email.png" id="email"
-          /></a>
+          <form
+            action="mailto:jon1993g@gmail.com"
+            method="post"
+            enctype="text/plain">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              required></textarea>
+
+            <input
+              type="submit"
+              value="Send" />
+          </form>
+          <div class="img-container">
           <a href="https://github.com/Cykotech" target="_blank"
-            ><img src="./resources/Github.png" id="github"
-          /></a>
+            ><img id="github" src="./resources/icons8-github-1080.png" /></a>
           <a
             href="https://www.linkedin.com/in/jonathon-hanson-8a2604269/"
-            target="_blank"
-            ><img src="./resources/LinkedIn.png" id="linkedin"
-          /></a>
+            target="_blank" 
+            ><img id="linkedin" src="./resources/icons8-linked-in-1080.png" /></a>
         </div>
       </footer>
     </div>

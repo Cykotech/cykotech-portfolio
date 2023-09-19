@@ -1,22 +1,32 @@
+/* Variable Declarations */
+
+:root {
+  --white: hsl(47, 23%, 88%);
+  --purple: hsl(295, 100%, 16%);
+  --gray: hsl(274, 3%, 45%);
+  --light-blue: hsl(210, 100%, 69%);
+  --dark-blue: hsl(175, 41%, 22%);
+}
+
 /* Universal Styles */
+
+* {
+  box-sizing: border-box;
+}
 
 body,
 html {
-  font-family: "Playfair Display", serif;
+  font-family: "Graduate";
   margin: 0 auto;
-  color: rgb(224, 224, 224);
-  background: linear-gradient(
-    158deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 106, 131, 1) 42%,
-    rgba(76, 0, 83, 1) 85%
-  );
+  color: var(--dark-blue);
+  background-color: var(--white);
   background-repeat: no-repeat;
   display: flex;
 }
 
 .wrapper {
   min-height: 100vh;
+  max-width: 100%;
   position: relative;
   flex: 1;
   display: flex;
@@ -25,8 +35,6 @@ html {
 }
 
 main {
-  /* padding-left: 1rem;
-    padding-right: 1rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,23 +43,30 @@ main {
 }
 
 h2 {
+  width: fit-content;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
   text-align: center;
-  font-size: 2.5em;
+  margin: 0 auto;
 }
 
 /* Header Styles */
 
 header {
-  background: linear-gradient(
-    rgba(38, 38, 38, 0.9) 0%,
-    rgba(38, 38, 38, 0) 99%
-  );
+  background-color: var(--purple);
   margin: 0 auto;
+  position: sticky;
+  top: 0;
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  color: rgb(224, 224, 224);
+  color: var(--white);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -108,11 +123,8 @@ header a:active {
 /* About Me Styles */
 
 #about {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  margin-inline: 5%;
-  margin-bottom: 5%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #about .container {
@@ -120,20 +132,40 @@ header a:active {
   align-items: center;
   justify-content: space-around;
   width: 95%;
-  background-color: rgba(38, 38, 38, 0.5);
+  background-color: var(--purple);
   padding: 5%;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 #about .container p {
-  padding-bottom: 3rem;
+  width: 75%;
   text-align: justify;
+  color: var(--white);
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  padding-right: 2rem;
 }
 
-#about .container img {
+#skills {
   width: 25%;
-  margin-left: 1.5rem;
-  margin-right: 10%;
+}
+
+#skills h3 {
+  color: var(--white);
+}
+
+#skills .container {
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 1.5rem;
+  justify-items: center;
+}
+
+#skills .container img {
+  width: 100%;
 }
 
 @media screen and (max-width: 425px) {
@@ -154,115 +186,91 @@ header a:active {
     padding-bottom: 0;
   }
 }
-/* Skills Styles */
 
-#skills {
-  margin-bottom: 5rem;
-  width: 100%;
-}
+/* Project Styles */
 
-#skills .container {
-  display: flex;
-  width: 85%;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-
-#skills .container img {
-  height: 100px;
-}
-
-@media screen and (max-width: 425px) {
-  #skills .container {
-    flex-wrap: wrap;
-    height: 225px;
-    align-content: space-between;
-    justify-content: center;
-  }
-
-  #skills .container img {
-    margin: 0;
-  }
+#project {
+  width: 100vh;
 }
 
 /* Footer Styles */
 
 footer {
-  display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   padding-top: 0.5rem;
-  background: linear-gradient(
-    360deg,
-    rgba(38, 38, 38, 0.9) 0%,
-    rgba(38, 38, 38, 0) 99%
-  );
+  background-color: var(--purple);
+  color: var(--white);
+  padding-bottom: 3rem;
 }
 
-footer h3 {
-  display: inline;
-  margin-left: 1rem;
+footer h2 {
+  width: fit-content;
+  color: var(--white);
 }
 
 footer .container {
+  width: 85%;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 2rem;
+}
+
+footer form {
+  display: grid;
   align-items: center;
+  grid-template-columns: repeat(1, auto 90%);
+  width: 100%;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-footer .container img {
-  width: 3rem;
+input[type="text"],
+input[type="email"] {
+  background-color: var(--white);
+  color: var(--gray);
+  padding: 1rem;
+  border: none;
+  border-radius: 20px;
 }
 
-footer .container a {
-  margin-left: 8rem;
+footer form textarea {
+  resize: none;
+  height: 5rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  color: var(--gray);
 }
 
-img#email {
-  border-radius: 6px;
+footer form textarea:focus-visible {
+  outline: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  footer .container #email:hover {
-    background-color: white;
-  }
+footer form input[type="submit"] {
+  grid-column: 2 / span 1;
+  width: 30%;
+  justify-self: center;
+  background-color: var(--white);
+  color: black;
+  padding: 0.5rem;
+  border-radius: 25px;
+  border: none;
 }
 
-footer .container #email:active {
-  transform: scale(0.85);
-  background-color: gray;
+footer .img-container {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
-img#github {
-  border-radius: 50%;
+footer .img-container a {
+  width: 45%;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  footer .container #github:hover {
-    background-color: white;
-  }
-}
-
-footer .container #github:active {
-  transform: scale(0.85);
-  background-color: rgb(128, 128, 128);
-}
-
-footer .container #linkedin {
-  border: 3px solid transparent;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  footer .container #linkedin:hover {
-    border: 3px solid black;
-    border-radius: 5px;
-  }
-}
-
-footer .container #linkedin:active {
-  transform: scale(0.85);
+footer .img-container img {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
