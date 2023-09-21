@@ -4,6 +4,7 @@
   --white: hsl(47, 23%, 88%);
   --purple: hsl(295, 100%, 16%);
   --gray: hsl(274, 3%, 45%);
+  --dark-gray: hsl(274, 3%, 15%);
   --light-blue: hsl(210, 100%, 69%);
   --dark-blue: hsl(175, 41%, 22%);
 }
@@ -14,14 +15,26 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
+  --accent-color: hsl(295, 100%, 16%);
+  --background-color: hsl(47, 23%, 88%);
+  --heading-color: hsl(175, 41%, 22%);
+  --border-color: hsl(274, 3%, 15%);
+  --form-color: hsl(47, 23%, 88%);
   font-family: "Graduate";
   margin: 0 auto;
-  color: var(--dark-blue);
-  background-color: var(--white);
+  color: var(--heading-color);
+  background-color: var(--background-color);
   background-repeat: no-repeat;
   display: flex;
+  transition: 0.4s;
+}
+
+body.dark {
+  --background-color: hsl(274, 3%, 15%);
+  --heading-color: hsl(210, 100%, 69%);
+  --border-color: hsl(274, 3%, 45%);
+  --form-color: hsl(274, 3%, 45%);
 }
 
 .wrapper {
@@ -58,7 +71,7 @@ h3 {
 /* Header Styles */
 
 header {
-  background-color: var(--purple);
+  background-color: var(--accent-color);
   margin: 0 auto;
   position: sticky;
   top: 0;
@@ -69,6 +82,8 @@ header {
   color: var(--white);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  border-bottom: 5px solid var(--border-color);
+  transition: 0.4s;
 }
 
 header h1 {
@@ -120,6 +135,60 @@ header a:active {
   }
 }
 
+/* Dark Mode Slider */
+
+header .dark-mode-slider {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 45%;
+}
+
+header .dark-mode-slider img {
+  height: 35px;
+}
+
+header .dark-mode-slider .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+header .dark-mode-slider input {
+  opacity: 0;
+}
+
+header .dark-mode-slider .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray);
+  transition: 0.4s;
+  border-radius: 40px;
+}
+
+header .dark-mode-slider .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white);
+  transition: 0.4s;
+  border-radius: 40px;
+}
+
+header .dark-mode-slider input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
 /* About Me Styles */
 
 #about {
@@ -132,7 +201,7 @@ header a:active {
   align-items: center;
   justify-content: space-around;
   width: 95%;
-  background-color: var(--purple);
+  background-color: var(--accent-color);
   padding: 5%;
   border-radius: 20px;
   margin: 0 auto;
@@ -200,14 +269,16 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding-top: 0.5rem;
-  background-color: var(--purple);
+  background-color: var(--accent-color);
   color: var(--white);
   padding-bottom: 3rem;
+  transition: 0.4s;
 }
 
 footer h2 {
   width: fit-content;
-  color: var(--white);
+  color: var(--form-color);
+  transition: 0.4s;
 }
 
 footer .container {
@@ -227,21 +298,24 @@ footer form {
 
 input[type="text"],
 input[type="email"] {
-  background-color: var(--white);
-  color: var(--gray);
+  background-color: var(--form-color);
+  color: var(--heading-color);
   padding: 1rem;
   border: none;
   border-radius: 20px;
+  font-size: 1.5rem;
+  transition: 0.4s;
 }
 
 footer form textarea {
   resize: none;
-  height: 5rem;
-  background-color: var(--white);
+  height: 10rem;
+  background-color: var(--form-color);
   padding: 1rem;
   border-radius: 25px;
   border: none;
-  color: var(--gray);
+  color: var(--heading-color);
+  transition: 0.4s;
 }
 
 footer form textarea:focus-visible {
@@ -252,11 +326,13 @@ footer form input[type="submit"] {
   grid-column: 2 / span 1;
   width: 30%;
   justify-self: center;
-  background-color: var(--white);
-  color: black;
+  background-color: var(--form-color);
+  color: var(--heading-color);
+  font-size: 2rem;
   padding: 0.5rem;
   border-radius: 25px;
   border: none;
+  transition: 0.4s;
 }
 
 footer .img-container {
@@ -269,8 +345,41 @@ footer .img-container a {
   width: 45%;
 }
 
-footer .img-container img {
+footer .img-container #github {
   width: 100%;
+  border-radius: 100%;
+}
+
+footer .img-container #github:hover {
+  background-image: radial-gradient(
+    var(--white) 0%,
+    var(--white) 56%,
+    #4b0052 56%,
+    #4b0052 100%
+  );
+}
+
+footer .img-container #github:active {
+  transform: scale(90%);
+  background-image: radial-gradient(
+    var(--gray) 0%,
+    var(--gray) 56%,
+    #4b0052 56%,
+    #4b0052 100%
+  );
+}
+
+footer .img-container #linkedin {
+  width: 100%;
+  border-radius: 35px;
+}
+
+footer .img-container #linkedin:hover {
+  border: 5px solid black;
+}
+
+footer .img-container #linkedin:active {
+  transform: scale(90%);
 }
 
 @media screen and (max-width: 768px) {

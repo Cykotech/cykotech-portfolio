@@ -1,6 +1,7 @@
-function scrollRight() {
-    
+function darkModeToggle() {
+  return document.body.classList.toggle("dark");
 }
 
-let right = document.getElementById("right");
-right.onclick = scrollRight;
+document.getElementById("toggle").addEventListener("click", () => {
+  return document.body.classList.toggle("dark");
+});
