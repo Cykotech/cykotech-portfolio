@@ -75,6 +75,7 @@ header {
   margin: 0 auto;
   position: sticky;
   top: 0;
+  z-index: 100;
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
@@ -318,6 +319,11 @@ header .dark-mode-slider input:checked + .slider:before {
 
 .project-container a {
   width: 30%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-container a:hover {
+  transform: scale(115%);
 }
 
 .project-container a img {
