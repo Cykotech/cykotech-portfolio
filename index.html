@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge" />
-    <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="./resources/styles.css" />
+      href="./style.css" />
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
@@ -19,163 +16,241 @@
       href="https://fonts.gstatic.com"
       crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet" />
-    <title>Jonathon Hanson</title>
+    <title>Cykotech Development Studio</title>
   </head>
-  <body class="">
-    <div class="wrapper">
-      <header id="header">
+  <body>
+    <nav>
+      <ul>
+        <li><span class="about-button">About Me</span></li>
+        <li><span class="projects-button">Projects</span></li>
+        <li><span class="contact-button">Contact Me</span></li>
+      </ul>
+    </nav>
+    <header>
+      <video
+        class="one"
+        autoplay
+        loop
+        muted>
+        <source
+          src="./assets/rays-background.webm"
+          type="video/webm" />
+      </video>
+      <video
+        class="two"
+        autoplay
+        loop
+        muted>
+        <source
+          src="./assets/code-background.webm"
+          type="video/webm" />
+      </video>
+      <div class="text-content">
+        <span class="fa-solid fa-terminal icon"></span>
         <h1>Jonathon Hanson</h1>
-        <div class="dark-mode-slider">
-          <img src="./resources/icons8-sun-100.png" />
-          <label class="switch">
-            <input
-              type="checkbox"
-              id="toggle" />
-            <span class="slider"></span>
-          </label>
-          <img src="./resources/icons8-moon-96.png" />
+        <p>Full-Stack Web Developer</p>
+        <ul>
+          <li class="pre-load">
+            <span
+              
+              class="button about-button"
+              >About Me</span
+            >
+          </li>
+          <li class="pre-load">
+            <span
+              
+              class="button projects-button"
+              >Projects</span
+            >
+          </li>
+          <li class="pre-load">
+            <span
+              
+              class="button contact-button"
+              >Contact Me</span
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section id="about">
+      <div class="about-container">
+        <div class="text">
+          <div class="heading-text">
+            <h2>About Me</h2>
+          </div>
+          <p>
+            My name is Jonathon Hanson, an enthusiastic Front-End Developer with
+            a passion for building beautiful and user-friendly web experiences.
+            Having recently completed Codecademy's Front-End Developer program,
+            gaining proficiency in HTML, CSS, JavaScript, and React, I am eager
+            to leverage my skills and contribute to a growing tech company.
+          </p>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects-target">Projects</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+        <span class="fit-image">
+          <img
+            src="./assets/self-image.jpg"
+            alt="A picture of a handsome developer" />
+        </span>
+      </div>
+      <div class="skills-container">
+        <div class="heading-text">
+          <h2>Skills & Technologies</h2>
+        </div>
+        <div class="scroller">
+          <ul class="skills scroller-inner">
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-html-5-500.png"
+                  alt="HTML"
+              /></span>
+              <p>HTML</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-css3-500.png"
+                  alt="CSS"
+              /></span>
+              <p>CSS</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-javascript-500.png"
+                  alt="JavaScript"
+              /></span>
+              <p>JavaScript</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-react-native-500.png"
+                  alt="React"
+              /></span>
+              <p>React.js</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-vue-js-500.png"
+                  alt="Vue"
+              /></span>
+              <p>Vue.js</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-c-sharp-logo-500.png"
+                  alt="C Sharp"
+              /></span>
+              <p>C#</p>
+            </li>
+            <li>
+              <span class="skill"
+                ><img
+                  src="./assets/icons8-git-500.png"
+                  alt="Git"
+              /></span>
+              <p>Git</p>
+            </li>
           </ul>
-        </nav>
-      </header>
-      <main>
-        <section id="about">
-          <h2>About Me</h2>
-          <div class="container">
-            <div class="about-container">
-              <img src="./resources/image1_0.jpg" />
-              <div class="text-container">
-                <h4>Elevating software with Logic, Precision, and Pride</h4>
-                <p>
-                  My name is Jonathon Hanson, a Front-End Developer. After
-                  spending years in the Restaurant industry, I'm making the
-                  transition to a career to make better use of my mind. I love
-                  taking on new challenges and learning new things. In my spare
-                  time, I like to play Role-Playing Games such as Skyrim and
-                  Dungeons & Dragons.
-                </p>
-              </div>
-            </div>
-            <div id="skills">
-              <h3>Skills</h3>
-              <div class="container">
-                <img src="./resources/icons8-html-5-1080.png" />
-                <img src="./resources/icons8-css3-1080.png" />
-                <img src="./resources/icons8-javascript-1080.png" />
-                <img src="./resources/icons8-react-native-1080.png" />
-                <img src="./resources/icons8-git-1080.png" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <h2 id="projects-target">Projects</h2>
-        <section id="projects">
-          <div class="project-container">
-            <h3>TrakkBlend</h3>
-            <a
-              href="https://trakkblend.netlify.app"
-              target="_blank"
-              id="trakkblend">
-              <img src="./resources/trakkblend.png" />
-            </a>
-            <div class="text-container">
-              <p>
-                A React application that searches for songs on Spotify, and then
-                allows the user to create a playlist and save it to their
-                account.
-              </p>
-              <p><strong>Technologies Used:</strong> React (UI)</p>
-              <a
-                href="https://github.com/Cykotech/TrakkBlend"
-                target="_blank"
-                >Source Code</a
-              >
-            </div>
-          </div>
-          <div class="project-container">
-            <h3>Link Management System (WIP)</h3>
-            <a
-              href="https://link-management-system.vercel.app/"
-              target="_blank"
-              id="lms">
-            </a>
-            <div class="text-container">
-              <p>
-                A React application that provides external assistance for The
-                Legend of Zelda: Tears of the Kingdom. Data is pulled from a
-                Google Sheets CMS, and the user is then able to input data to be
-                used across the various features.
-                <em>Currently in development.</em>
-              </p>
-              <p>
-                <strong>Technologies Used:</strong> React (UI), Zustand (State
-                Management), SCSS (CSS Preprocessor), Google Sheets (CMS)
-              </p>
-              <a
-                href="https://github.com/Cykotech/link_management_system"
-                target="_blank"
-                >Source Code</a
-              >
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer id="contact">
-        <div class="text-container">
-          <h2>Contact Me</h2>
-          <p>To schedule a meeting with me, you can reach me at <br><strong>cykotech.development@yahoo.com</strong></p>
         </div>
-        <!-- <div class="container">
-          <form>
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required />
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required />
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              required></textarea>
-            <input
-              type="submit"
-              value="Send" />
-          </form> -->
-          <div class="img-container">
+      </div>
+    </section>
+    <section id="projects">
+      <div class="heading-text">
+        <h2>Projects</h2>
+      </div>
+      <div class="section-container">
+        <div class="project-container">
+          <span class="project">
+            <a href="https://trakkblend.netlify.app/"
+              ><img
+                src="./assets/trakkblend.png"
+                alt="Trakkblend UI"
+            /></a>
+          </span>
+          <h3>TrakkBlend</h3>
+          <p class="project-info">
+            A React application that searches for songs on Spotify, and then
+            allows the user to create a playlist and save it to their account.
+          </p>
+          <p class="project-techs">
+            <strong>Technologies Used:</strong> React (UI)
+          </p>
+          <a
+            href="https://github.com/Cykotech/TrakkBlend"
+            target="_blank"
+            class="button"
+            >Source Code</a
+          >
+        </div>
+        <div class="project-container">
+          <span class="project">
+            <a href="https://link-management-system.vercel.app/"
+              ><img
+                src="./assets/totk_main.png"
+                alt="Trakkblend UI"
+            /></a>
+          </span>
+          <h3>Link Management System (WIP)</h3>
+          <p class="project-info">
+            A React application that provides external assistance for The Legend
+            of Zelda: Tears of the Kingdom. Data is pulled from a Google Sheets
+            CMS, and the user is then able to input data to be used across the
+            various features.
+            <em>Currently in development.</em>
+          </p>
+          <p class="project-techs">
+            <strong>Technologies Used:</strong> React (UI), Zustand (State
+            Management), SCSS (CSS Preprocessor), Google Sheets (CMS)
+          </p>
+          <a
+            href="https://github.com/Cykotech/link_management_system"
+            target="_blank"
+            class="button"
+            >Source Code</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer id="contact">
+      <div class="heading-text">
+        <h2>Contact Me</h2>
+      </div>
+      <div class="button-container">
+        <ul>
+          <!-- <li><a class="button wide primary">Email Me</a></li> -->
+          <li>
             <a
+              class="button wide"
+              href="https://www.linkedin.com/in/jonathon-hanson-8a2604269"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              class="button wide"
               href="https://github.com/Cykotech"
               target="_blank"
-              ><img
-                id="github"
-                src="./resources/icons8-github-1080.png" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jonathon-hanson-8a2604269/"
-              target="_blank"
-              ><img
-                id="linkedin"
-                src="./resources/icons8-linked-in-1080.png" />
-            </a>
-          </div>
-        </div>
-      </footer>
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="top-button">
+      <span class="fa-solid fa-arrow-up"></span>
     </div>
-    <script
-      src="./script.js"
-      defer></script>
   </body>
+  <script
+    src="https://kit.fontawesome.com/8942288b8d.js"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </html>
